@@ -1,16 +1,27 @@
 <div class="row">
-    <div class="col-12 py-5 text-center">
+    <div class="col-12 pt-5 pb-3 text-center">
         <h1>
             Package Manager Presentation - InsanityMeetsHH 
             <a href="https://github.com/InsanityMeetsHH/pm-presentation" target="_blank"><i class="fab fa-inverse fa-github" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="GitHub"></i></a>
         </h1>
     </div>
 </div>
+<div class="row text-center justify-content-center lang-switch">
+    <div class="col-12 col-lg-8 pb-5">
+        <a href="<?php echo $meta['baseUrl']; ?>?l=de">
+            <img src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/de.svg">
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="<?php echo $meta['baseUrl']; ?>">
+            <img src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/us.svg">
+        </a>
+    </div>
+</div>
 <div class="row text-center justify-content-center">
     <div class="col-12 col-lg-8 pb-5">
         <div class="slider slider-brands">
+            <?php if (isset($_GET['l']) && $_GET['l'] === 'de') { ?>
             <div class="slider-item px-5">
-                <h2>Was sind Package Manager?</h2>
+                <h2>Was ist eine Softwarepaket-Verwaltung?</h2>
                 <p>
                     Eine Softwarepaket-Verwaltung ermöglicht die komfortable 
                     Verwaltung von Software, die in Programmpaketform vorliegt, 
@@ -22,25 +33,65 @@
                 </p>
             </div>
             <div class="slider-item px-5">
-                <h2>Vorteile</h2>
+                <h2>Features</h2>
                 <ul>
                     <li>Herunterladen und Installieren über standard oder definierte Repositories</li>
                     <li>Installieren mit berücksichtigung von Abhängigkeiten</li>
-                    <li>Verschlankung von Git/SVN-Repositories</li>
-                    <li>Packete liegen in einem definierten Ordner</li>
+                    <li>Verschlankung von VCS-Repositories (Git, SVN, ...)</li>
+                    <li>Packete liegen in einem definierten Ordner (NPM -> node_modules, Composer -> vendor)</li>
                     <li>Einfacher Versionswechsel von Packeten (Install / Update / Revert)</li>
                 </ul>
             </div>
             <div class="slider-item px-5">
                 <h2>Quellen</h2>
                 <p>
-                    <a href="https://de.wikipedia.org/wiki/Paketverwaltung" target="_blank">Paketverwaltung Wiki</a><br/>
+                    <a href="https://de.wikipedia.org/wiki/Paketverwaltung" target="_blank">Paketverwaltung Wiki</a>
+                </p>
+                <h2>weiterführende Links</h2>
+                <p>
                     <a href="https://php-de.github.io/jumpto/composer/" target="_blank">Composer Tutorial</a><br/>
                     <a href="https://www.norberteder.com/node-package-manager-und-package-json/" target="_blank">NPM Tutorial</a><br/>
                     <a href="https://github.com/InsanityMeetsHH/Slim-Skeleton" target="_blank">Composer Beispiel (Slim Skeleton)</a><br/>
                     <a href="https://github.com/InsanityMeetsHH/gulp-templating" target="_blank">NPM Beispiel (Gulp Templating)</a>
                 </p>
             </div>
+            <?php } else { ?>
+            <div class="slider-item px-5">
+                <h2>What is a package manager?</h2>
+                <p>
+                    A package manager enables the easy management of 
+                    software, which is in program package form, on one system. 
+                    These include installing, updating and uninstalling.
+                </p>
+                <p>
+                    I use <a href="https://nodejs.org/de/" target="_blank">Node.js</a> (<a href="https://www.npmjs.com/" target="_blank">NPM</a>) for JS/CSS 
+                    and <a href="https://getcomposer.org/" target="_blank">Composer</a> (<a href="https://packagist.org/" target="_blank">Packagist</a>) for PHP.
+                </p>
+            </div>
+            <div class="slider-item px-5">
+                <h2>Features</h2>
+                <ul>
+                    <li>Download and install via standard or defined repositories</li>
+                    <li>Install with Dependencies</li>
+                    <li>Streamlining of VCS repositories (Git, SVN, ...)</li>
+                    <li>Packages are in a defined folder (NPM -> node_modules, Composer -> vendor)</li>
+                    <li>Easy version change of packages (Install / Update / Revert)</li>
+                </ul>
+            </div>
+            <div class="slider-item px-5">
+                <h2>Source</h2>
+                <p>
+                    <a href="https://en.wikipedia.org/wiki/Package_manager" target="_blank">Package Manager</a>
+                </p>
+                <h2>related Links</h2>
+                <p>
+                    <a href="https://getcomposer.org/doc/00-intro.md" target="_blank">Composer Tutorial</a><br/>
+                    <a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank">NPM Tutorial</a><br/>
+                    <a href="https://github.com/InsanityMeetsHH/Slim-Skeleton" target="_blank">Composer Example (Slim Skeleton)</a><br/>
+                    <a href="https://github.com/InsanityMeetsHH/gulp-templating" target="_blank">NPM Example (Gulp Templating)</a>
+                </p>
+            </div>
+            <?php } ?>
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@
         $('[data-toggle="tooltip"]').tooltip();
         
         $('.slider-brands').slick({
+            infinite: false,
             dots: true,
             autoplay: false,
             autoplaySpeed: 2000
